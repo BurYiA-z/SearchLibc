@@ -1,6 +1,5 @@
 # SearchLibc python库 说明书
 
-注：**针对python3写的库，python2无法使用谢谢**
 
 由于原先一直用的 LibcSearcher 最近不太好用了，明明数据库里有，却一直找不到对应的 libc，所以萌发了自己写一个库的想法
 
