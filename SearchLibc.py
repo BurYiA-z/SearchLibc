@@ -1,6 +1,7 @@
 from __future__ import print_function
 from engine import engine
 
+import os
 import sys
 import subprocess
 
@@ -11,7 +12,7 @@ class SearchLibc(object):
     def __init__(self, func=None, address=None):
         self.condition = {}
         self.libc_so = ''
-        self.PATH = 'libc-database/db/'
+        self.PATH = os.path.join(os.path.realpath(os.path.dirname(__file__)), "libc-database/db/")
         if func is not None and address is not None:
             self.add(func, address)
 
@@ -59,6 +60,8 @@ class SearchLibc(object):
         if len(names) == 0:
             ret.append(libc['system'])
             ret.append(libc['str_bin_sh'])
+        elif len(names) == 1:
+            return libc[names[0]]
         else:
             for i in range(len(names)):
                 ret.append(libc[names[i]])

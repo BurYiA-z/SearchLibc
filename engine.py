@@ -65,5 +65,5 @@ class Engine(object):
         # symbols_list = sorted(symbols.items(), key=operator.itemgetter(1))
         # return symbols_list
 
-
-engine = Engine('./libc-database')
+libcdb = os.path.join(os.path.realpath(os.path.dirname(__file__)), "libc-database/")
+engine = Engine(libcdb)
