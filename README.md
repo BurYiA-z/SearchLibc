@@ -9,8 +9,10 @@ ps: 搜索功能参考了该项目【https://github.com/blukat29/search-libc】
 
 # 安装
 1. ruby安装
-> gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-> curl -sSL https://get.rvm.io | bash -s stable --rails
+    apt install gnupg2 curl
+    curl -sSL https://rvm.io/pkuczynski.asc | gpg2 --import -
+    curl -sSL https://get.rvm.io | bash -s stable --rails
+    如果是root用户，安装完成后记得将"source /usr/local/rvm/scripts/rvm"这句话加入到bashrc中
 
 2. one_gadget安装
 > gem install one_gadget
